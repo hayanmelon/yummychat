@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "756394425078",
+    "project_id": "chat-app-b55cc",
+    "storage_bucket": "chat-app-b55cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756394425078:android:014d28db9a630b54064ad7",
+        "android_client_info": {
+          "package_name": "com.example.yummychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756394425078-a1lo06tlefh921h9h06990jticed6li1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIHQ4DORWc7PyIX18fe-IaND-gx8qZ_uU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756394425078-a1lo06tlefh921h9h06990jticed6li1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
