@@ -9,7 +9,15 @@ void main() async {
   // 메인메소드 내에서 비동기 방식으로 반드시 이 메소드를 먼저불러오고,
   // 그다음에 Firebase.initialiszeAPp 메소드를 불러와야함
   print('Await Firebase Initializing');
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyDIHQ4DORWc7PyIX18fe-IaND-gx8qZ_uU",
+      appId: "1:756394425078:android:014d28db9a630b54064ad7",
+      messagingSenderId: "756394425078",
+      projectId: "chat-app-b55cc",
+    ),
+    
+  );
   print('Now, Run App');
   runApp(MyApp());
 }
