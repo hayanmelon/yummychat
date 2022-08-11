@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'screens/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
 void main() async {
   print('Start Program');
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,6 +10,7 @@ void main() async {
   // 그다음에 Firebase.initialiszeAPp 메소드를 불러와야함
   print('Await Firebase Initializing');
   await Firebase.initializeApp();
+  print('Now, Run App');
   runApp(MyApp());
 }
 
