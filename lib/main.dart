@@ -16,7 +16,6 @@ void main() async {
       messagingSenderId: "756394425078",
       projectId: "chat-app-b55cc",
     ),
-    
   );
   print('Now, Run App');
   runApp(MyApp());
