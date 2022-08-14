@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 class ChatScreen extends StatefulWidget {
@@ -50,8 +51,11 @@ class _ChatScreenState extends State<ChatScreen> {
           )
         ],
       ),
-      body: Center(
-        child: Text('Chat screen'),
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection('chats/5ahAvpIq6vTHMBsWRR1q/message').
+        snapshots(),
+        builder: ,
+        // 25강 16:36
       ),
 
     );
