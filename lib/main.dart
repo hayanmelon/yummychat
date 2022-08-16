@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:yummychat/screens/chat_screen.dart';
 import 'screens/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -17,7 +19,7 @@ void main() async {
       projectId: "chat-app-b55cc",
     ),
   );
-  print('Now, Run App');
+  print('Now, Run MyApp');
   runApp(MyApp());
 }
 
@@ -25,12 +27,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print('  Widget build(BuildContext context) {');
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: LoginSignupScreen(),
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot){
+          print('snapshot : snapshot.hasData ${snapshot.hasData}');
+          if (snapshot.hasData){
+            return ChatScreen();
+          }
+          return LoginSignupScreen();
+        },
+      ),
     );
   }
 }

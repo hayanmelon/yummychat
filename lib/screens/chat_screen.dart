@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:yummychat/chatting/chat/message.dart';
+import 'package:yummychat/chatting/chat/new_message.dart';
 
 
 class ChatScreen extends StatefulWidget {
@@ -45,17 +47,21 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
               onPressed: (){
                 _authentication.signOut();
-                Navigator.pop(context);
+                 // Navigator.pop(context);
               },
               icon:Icon(Icons.exit_to_app)
           )
         ],
       ),
-      body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('chats/5ahAvpIq6vTHMBsWRR1q/message').
-        snapshots(),
-        builder: ,
-        // 25강 16:36
+      body: Container(
+        child: Column(
+          children: [
+            Expanded(
+                child: Messages()
+            ),
+            NewMessage()
+          ],
+        ),
       ),
 
     );
